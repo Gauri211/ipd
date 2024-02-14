@@ -1,0 +1,45 @@
+Name,Rating,Type,Address,"Latitude, Longitude",Station,Budget,ID
+Adar Udupi Refreshments (Pure Veg Vile Parle),3.7,South Indian,"3VW2+JRH, Santa Sakha Building, Nehru Rd, Vile Parle East, Mumbai, Maharashtra 400057","19.096748091317934, 72.85209323556836",vileparle,700,1
+Jumbo king,4.2,Hamburger,"W), opp. Station, Zaveri Bladg, No.2, Dashrathlal Joshi Rd","19.108049343340294, 72.84296301539987",vileparle,800,2
+Sunder Veg,3.9,South Indian,"54, Mahatma Gandhi Rd, Navpada, Vile Parle East, Vile Parle, Mumbai, Maharashtra 400057","19.10006750228497, 72.84596353742211",vileparle,700,3
+Lucky Sandwich & Pizza Corner,4.3,Sandwich,"Station Road, Bajaj Road, corner, Vile Parle West, Mumbai, Maharashtra 400056","19.100441739992835, 72.84248422022117",vileparle,800,4
+Kya Lenge Aap,4.7,Fast Food,"Shop No.5, R T Building, Pherozeshah Mehta Rd","19.0967871528599, 72.84822493557327",vileparle,900,5
+Taste of Paratha,3.8,Fast Food,"9, Hanuman Rd, Satsang CHSL, Navpada, Vile Parle East, Vile Parle, Mumbai, Maharashtra 400057","19.103407635991406, 72.8487752778989",vileparle,700,6
+Maruti Pav Bhaji,4.0,Restaurant,"Bhagat Building, shop no 1- 383 ll, Swami Vivekananda Rd, opposite dominos","19.100436701803552, 72.83961052022549",vileparle,800,7
+Saurashtra,4.1,Fast Food,"101, Nehru Rd, near Bank Of Baroda, Navpada, Vile Parle East, Vile Parle, Mumbai, Maharashtra 400057","19.098370442782944, 72.84786113742534",vileparle,800,8
+Eatsee,4.8,Restaurant,"Shop No 06, Hari Leela Apartment, Ram Mandir Rd, opp. Kalra Shukla Classes, Navpada, Vile Parle East, Vile Parle, Mumbai, Maharashtra 400057","19.099086280071816, 72.84536004906262",vileparle,900,9
+Udupi to mumbai,4.2,Indian,"Besides Papillon, Shop no 4/5 Harzabai House, Irla Rd, Vile Parle West, Mumbai, Maharashtra 400056","19.11295512729908, 72.83789811539988",vileparle,800,10
+Shree Laxmi Sagar,3.7,Vegetarian,"Shop No.1&2 Vishwakarma Baug, Bajaj Road, Vile Parle West, Mumbai, Maharashtra 400056","19.105212757772335, 72.8425620932445",vileparle,700,11
+RJ Spice,4.3,Chinese,"Shop No.2, Kondivita Andheri Kurla Rd, RK Mandir Rd, near J.B. Nagar, near MIDC, Andheri East, Mumbai, Maharashtra 400059","19.114684946162697, 72.87111466440854",andheri,800,12
+Poolside Cafe,4.2,Restaurant,"VITS Hotel, Andheri Kurla Road, International Airport Zone, Andheri East, Mumbai, Maharashtra 400059","19.111789649789248, 72.87133836440785",andheri,800,13
+China Gate Restaurant,4.1,Chinese,"Akruti Star, G-1, Ground Floor, MIDC Central Rd, Andheri East, Mumbai, Maharashtra 400069","19.118686326592446, 72.87045500673369",andheri,800,14
+Choice Restaurant,4.4,Family-friendly,"Abu Asad Compound Marol Pipeline Road, Andheri (E, opp. Mukund Hospital, Andheri East, Mumbai, Maharashtra 400059","19.110717526136902, 72.87205035090825",andheri,800,15
+Mystery Box - Andheri - J.B. Nagar / Chakala,3.9,Fast Food,"Metro Station, Mystery Box / Shawarma Street (Multi-Kitchen Outlet Shop No. 3, Post office Bldg, Sahar Rd, opp. Sahar Plaza Midas II, near J.B. Nagar, Chakala, J B Nagar, Andheri East, Mumbai, Maharashtra 400059","19.113171872448962, 72.86861635090895",andheri,700,16
+Apna Dhaba Family Restaurant and Bar,3.8,Restaurant,"318/41, Kakad Corner, Marol Pipeline, Andheri - Kurla Rd, Andheri East, Mumbai, Maharashtra 400059","19.1116421499029, 72.87108335091521",andheri,700,17
+Gajalee restaurant,4.3,Seafood,"E3, Udyog Sadan No.2, MIDC, opposite ESIC Hospital, MIDC, Andheri East, Mumbai, Maharashtra 400093","19.117699531078745, 72.8669749778969",andheri,800,18
+Milan Punjab,3.3,Biryani,"4V7C+9GH, Sahar Road , Kamala Bhawan, Koldongri , Andheri East, Mumbai, Maharashtra 400069","19.114514121890135, 72.87134081006045",andheri,700,19
+BORA BORA,3.9,Restaurant,"G-1, Akruti Star, MIDC Central Rd, M.I.D.C, Pipeline, Andheri East, Mumbai, Maharashtra 400093","19.12116406488131, 72.87067562222923",andheri,700,20
+Cocoon Restaurant,4.1,North Indian,"New, Chakala Rd, Shaheed Bhagat Singh Society, J.B. Nagar, Tarun Bharat, Andheri East, Mumbai, Maharashtra 400093","19.111009713107613, 72.86293673556813",andheri,800,21
+Gk 2 Family Restaurant,3.9,North Indian,"4V6C+F3F, Opp. Trade star, J.B.nagar, Andheri - Kurla Rd, Mumbai, Maharashtra 400059","19.111378050208845, 72.87023027975037",andheri,700,22
+Goregaon SOCIAL,4.1,Restaurant,"Oberoi Mall, Western Express Hwy, Yashodham, Goregaon, Mumbai, Maharashtra 400063","19.173960005000342, 72.86059966440641",goregaon,700,23
+Fleur Restaurant - The Fern Hotel Goregaon,4.2,Buffet,"4/277, IB Patel Rd, Behind H.P Petrol, Jay Prakash Nagar, Goregaon, Mumbai, Maharashtra 400063","19.162418287556097, 72.85712240673202",goregaon,700,24
+HOD- Kitchen & Bar,4.1,Restaurant,"Aspen Park 3/4, Nirlon Knowledge Park Backgate, Walbhat Rd, Goregaon, Mumbai, Maharashtra 400063","19.15603303450008, 72.85165975091199",goregaon,700,25
+Peshawari Grill,4.0,Buffet,"Second Floor, The Hub Mall, Western Express Hwy, Cama Industrial Estate, Goregoan East, Mumbai, Maharashtra 400063","19.154997336015505, 72.85625343556946",goregaon,700,26
+180 Degrees,4.2,Buffet,"Veer Savarkar Flyover, Udyog Nagar, Goregaon West, Mumbai, Maharashtra 400062","19.17363360746604, 72.84586887974581",goregaon,700,27
+China Ming,4.1,Chinese,"The Hub Mall, Second Floor, Western Express Hwy, Cama Industrial Estate, Goregaon, Mumbai, Maharashtra 400063","19.15500219666026, 72.85626116440099",goregaon,700,28
+Farzi Cafe,4.2,Modern Indian restaurant,"Unit no- 2, Third floor, Oberoi Mall, Off, Western Express Hwy, Yashodham, Goregaon, Mumbai, Maharashtra 400063","19.17390830605727, 72.86071336440112",goregaon,700,29
+My Kitchen Goregaon,3.9,Indian,"Shop No,2&3, Pav Bakery, 5, Film City Rd, nr. Maruti Service Centre, Jai Bhim Nagar, Goregaon, Mumbai, Maharashtra 400065","19.17019829898051, 72.87630093082083",goregaon,600,30
+Ratna Veg. Restaurant,3.8,Vegetarian,"Ashok Raj Building, Swami Vivekananda Rd, Kakaji Nagar, Jawahar Nagar, Goregaon West, Mumbai, Maharashtra 400062","19.163278514851147, 72.84619186440682",goregaon,600,31
+Veranda,4.3,Restaurant,"331, Doctor BR Ambedkar Road, Pali Hill, Bandra West, Mumbai, Maharashtra 400050","19.06707340847168, 72.83027256666422",bandra,1000,32
+"Bastian, Bandra",4.4,Seafood,"Kamal Building, B/1, New, Linking Rd, next to Burger King, Bandra West, Mumbai, Maharashtra 400050","19.063798873647475, 72.83488282433426",bandra,1000,33
+Lucky Restaurant,4.0,North Indian,"9, Hill Road, Swami Vivekananda Rd, Bandra West, Mumbai, Maharashtra 400050","19.05407480251953, 72.83775525316918",bandra,1000,34
+Pali Bhavan,4.4,Restaurant,"10, Pali Mala Rd, Adarsh Nagar, Bandra West, Mumbai, Maharashtra 400050","19.06235408980298, 72.82942098200452",bandra,1000,35
+The Fatty Bao,4.3,Asian,"Ground Floor, Summerville, Linking Road, Near KFC, 14th & 33rd Cross Road, Bandra West, Mumbai, Maharashtra 400050","19.065790628490916, 72.83230849549935",bandra,1000,36
+Sigdi Restaurant Bandra,3.9,Mughlai,"160-B, Abbas Compound, 29th Rd, T.P.S III, Bandra West, Mumbai, Maharashtra 400050","19.06179561196762, 72.83338659549919",bandra,900,37
+China Gate Restaurant,4.2,Chinese,"2nd Floor Tamang Niwas, 155, Waterfield Road, Bandra West, Mumbai, Maharashtra 400050","19.062248333043367, 72.83430882433437",bandra,1000,38
+Eat Around the Corner,4.3,Fast Food,"24th, High School, Junction of, &, 30th Rd, opp. St. Theresa's Boys, TPS III, Bandra West, Mumbai, Maharashtra 400050","19.062699315966167, 72.83265813782903",bandra,1000,39
+Mini Punjab's Bandra,3.9,Punjabi,"Jn. of 16th & 33rd, TPS Rd, Bandra West, W, Maharashtra 400050","19.065546786871383, 72.83108283782904",bandra,900,40
+Ming Yang,4.5,Chinese,"Byramji Jeejeebhoy Road, Bandstand Promenade, Bandra West, Mumbai, Maharashtra 400050","19.044263638956565, 72.81964793782858",bandra,1200,41
+Tea villa Café,4.0,Café,"Hill Rd, opp. Marks & Spencer, Santosh Nagar, Bandra West, Mumbai, Maharashtra 400050","19.05604584554542, 72.8340235243342",bandra,1000,42
+Breve Café,4.3,Café,"Shop No.12, Pearl Haven Apartments, Chapel Rd, St Sebastian Colony, Mount Mary, Bandra West, Mumbai, Maharashtra 400050","19.05084368891823, 72.82664201083938",bandra,1000,43
+Coffee By Di Bella,3.5,Café,"1, Perry Cross Rd, Bandra West, Mumbai, Maharashtra 400050","19.063234909970053, 72.8236807837644",bandra,900,44
