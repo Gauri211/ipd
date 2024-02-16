@@ -1,4 +1,4 @@
-import { Avatar, Box, Flex, Heading, Input, Select, Slider, SliderFilledTrack, SliderThumb, SliderTrack, Stack, Text } from '@chakra-ui/react'
+import { Avatar, Box, Button, Flex, Heading, Input, Select, Slider, SliderFilledTrack, SliderMark, SliderThumb, SliderTrack, Stack, Text, Tooltip } from '@chakra-ui/react'
 import React, { useState } from 'react'
 import {
     NumberInput,
@@ -9,28 +9,24 @@ import {
   } from '@chakra-ui/react'
 import { useContext } from 'react'
 import { ImageContext } from '../context/selected'
-import BudgetSlider from './BudgetSlider'
+import { useNavigate } from 'react-router-dom'
 
 const Filters = () => {
     const [sliderValue, setSliderValue] = useState(50)
     const { selectedImageNames } = useContext(ImageContext);
 
     console.log(selectedImageNames)
-  const labelStyles = {
-    mt: '2',
-    ml: '-2.5',
-    fontSize: 'sm',
-  }
+    const navigate = useNavigate('/plans')
 
   return (
     <Box>
         <Flex bg='#1F1F1F' height={'150px'} borderRadius={10} justifyContent={'space-around'} align={'center'} p='8%' mb='5%'>
             <Box>
-                <Heading color={'white'} size={'sm'}>Welcome</Heading>
+                <Heading color={'white'} size={'md'}>Welcome</Heading>
                 <Text fontSize={20} color={'white'} size={'sm'}>Jessica</Text>
             </Box>
             <Box>
-            <Avatar color={'white'}/>
+            <Avatar color={'white'} h='70px' w='70px'/>
             </Box>
         </Flex>
         <Box bg='#1F1F1F' borderRadius={10} height={'80vh'}>
@@ -55,42 +51,72 @@ const Filters = () => {
             </Box>
             <Text fontSize={'18px'} color='white' bgColor={'grey'} p='1% 0 1% 8%' fontWeight={500}>FILTERS</Text>
             <Box p='2% 8%'>
-                <Stack spacing={4}>
+                <Stack spacing={2}>
                 <Text fontSize={15} color={'white'} mb='1%'>NO OF HOURS</Text>
                 <NumberInput defaultValue={5} min={1} max={24}>
                     <NumberInputField bgColor={'transparent'} borderRadius={5} border={'1px solid white'} color={'white'}/>
                     <NumberInputStepper color={'white'}>
-                        <NumberIncrementStepper />
-                        <NumberDecrementStepper />
+                        <NumberIncrementStepper color={'white'}/>
+                        <NumberDecrementStepper color={'white'}/>
                     </NumberInputStepper>
                 </NumberInput> 
-                <Text fontSize={15} color={'white'} mb='1%'>BUDGET</Text>
-                <Slider aria-label='slider-ex-2' zIndex={20}  width={'200px'} color='white' defaultValue={30}>
-  <SliderTrack>
-    <SliderFilledTrack />
-  </SliderTrack>
-  <SliderThumb />
-</Slider>
-                <Text fontSize={15} color={'white'} mb='1%'>RATING</Text>
-                <BudgetSlider />
+                <Text fontSize={15} color={'white'} mb='8%'>BUDGET</Text>
+                <Slider
+      id='slider'
+      defaultValue={5}
+      min={0}
+      max={100}
+      colorScheme='white'
+      onChange={(v) => setSliderValue(v)}
+    >
+      <SliderTrack>
+        <SliderFilledTrack />
+      </SliderTrack>
+      <Tooltip
+        hasArrow
+        bg='white'
+        color='black'
+        placement='top'
+        label={`${sliderValue}%`}
+        isOpen={true} // Set isOpen to true to make the tooltip display constantly
+      >
+        <SliderThumb />
+      </Tooltip>
+    </Slider>
+                <Text fontSize={15} color={'white'} m='5% 0'>RATING</Text>
+                <Slider aria-label='slider-ex-2' colorScheme='white' defaultValue={30}>
+                    <SliderTrack>
+                        <SliderFilledTrack />
+                    </SliderTrack>
+                    <SliderThumb />
+                </Slider>
                 <Text fontSize={15} color={'white'} mb='1%'>MODE OF TRANSPORT</Text>
                 <Select
-  placeholder='Any'
-  variant='filled'
-  bg='#1F1F1F'
-  color='white'
-  _placeholder={{ color: 'white' }}
-  _focus={{ bg: '#1F1F1F', color: 'white' }}
-  width={'200px'}
->
-  <option value='option1'>Driving</option>
-  <option value='option2'>Walking</option>
-  <option value='option3'>Train</option>
-</Select>
+                    placeholder='Any'
+                    variant='filled' // Use 'flushed' variant for a cleaner appearance
+                    bg='#1F1F1F'
+                    color='white'
+                    borderColor='white'
+                    _placeholder={{ color: 'white', opacity: '0.7' }} // Adjust placeholder opacity as needed
+                    _focus={{ bg: '#1F1F1F', color: 'white', borderColor: 'white' }} // Adjust focus styles as needed
+                    >
+                    <option value='option1' color='black'>Driving</option>
+                    <option value='option2'>Walking</option>
+                    <option value='option3'>Train</option>
+                </Select>
+                <Button 
+                bgColor={'white'} 
+                color={'black'} 
+                fontWeight={500} 
+                mt='3%' 
+                w='150px' 
+                alignSelf='center'
+                onClick={() => navigate('/plans')}
+                >PROCEED</Button>
+
                 </Stack>
 
             </Box>
-            
         </Box>
     </Box>
   )

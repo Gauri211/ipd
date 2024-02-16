@@ -4,6 +4,17 @@ import { Box, Flex, Input, Button } from '@chakra-ui/react';
 
 const Navbar = () => {
   return (
+    <Box
+        bg="black"
+        h="60px"
+        position="fixed"
+        top="0"
+        left="80px"
+        right="300px"
+        zIndex="10"
+        p='1% 3%'
+        align='center'
+      >
       <Flex justify="space-between" align="center">
         <Box>
           {/* Search bar */}
@@ -23,6 +34,7 @@ const Navbar = () => {
           </Button>
         </Box>
       </Flex>
+      </Box> 
   );
 };
 

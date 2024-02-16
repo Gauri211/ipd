@@ -25,24 +25,9 @@ const Layout = ({ children }) => {
     </Box>
 
     {/* Content */}
-    <Box ml="80px" mr='280px' flex="1" overflowY="auto">
-      {/* Navbar */}
-      {/* <Box
-        bg="black"
-        h="60px"
-        position="fixed"
-        top="0"
-        left="80px"
-        right="300px"
-        zIndex="10"
-        p='2% 3% 0'
-        align='center'
-      >
-        <Navbar />
-      </Box> */}
-
+    <Box ml="80px" mr='280px' flex="1" overflowY="auto" bgColor={'black'}>
       {/* Main Content */}
-      <Box bgColor={'black'}>
+      <Box>
       <VStack pt="60px">
         {children}
       </VStack>
