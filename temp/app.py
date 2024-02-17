@@ -14,6 +14,8 @@ from malls import malls_calculation
 from clubs import clubs_calculation
 from nature import nature_calculation
 from adventure import adventure_calculation
+from religious import religious_calculation
+from theatre import theatre_calculation
 
 # 2. Create the app object
 app = FastAPI()
@@ -46,27 +48,39 @@ def get_restaurants():
 
 @app.get('/malls')
 def get_malls():
-    time, mode_of_transport, distance, location, rating, users_budget = inputs()
+    time, mode_of_transport, distance, location, rating, users_budget,cuisine_type  = inputs()
     malls = malls_calculation(location , distance, rating)
     return malls.to_dict(orient='records') 
 
 @app.get('/clubs')
 def get_clubs():
-    time, mode_of_transport, distance, location, rating, users_budget = inputs()
+    time, mode_of_transport, distance, location, rating, users_budget, cuisine_type = inputs()
     clubs = clubs_calculation(location , distance, rating)
     return clubs.to_dict(orient='records') 
 
 @app.get('/nature')
 def get_nature():
-    time, mode_of_transport, distance, location, rating, users_budget = inputs()
+    time, mode_of_transport, distance, location, rating, users_budget,cuisine_type = inputs()
     nature = nature_calculation(location , distance, rating)
     return nature.to_dict(orient='records') 
 
 @app.get('/adventure')
 def get_adventure():
-    time, mode_of_transport, distance, location, rating, users_budget = inputs()
+    time, mode_of_transport, distance, location, rating, users_budget, cuisine_type = inputs()
     adventure = adventure_calculation(location , distance, rating)
     return adventure.to_dict(orient='records') 
+
+@app.get('/religious')
+def get_adventure():
+    time, mode_of_transport, distance, location, rating, users_budget , cuisine_type = inputs()
+    religious = religious_calculation(location , distance, rating)
+    return religious.to_dict(orient='records') 
+
+@app.get('/theatre')
+def get_adventure():
+    time, mode_of_transport, distance, location, rating, users_budget , cuisine_type = inputs()
+    theatre = theatre_calculation(location , distance, rating)
+    return theatre.to_dict(orient='records') 
 
 if __name__ == '__main__':
     uvicorn.run(app, host='127.0.0.1', port=8000)
