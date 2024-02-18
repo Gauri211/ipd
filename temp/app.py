@@ -16,6 +16,8 @@ from nature import nature_calculation
 from adventure import adventure_calculation
 from religious import religious_calculation
 from theatre import theatre_calculation
+from plans import plans
+from recommend2 import recommend2
 
 # 2. Create the app object
 app = FastAPI()
@@ -31,6 +33,26 @@ user_interests = {
     'user1': {'Type': ['Buffet', 'Chinese'], 'Budget': [900], 'Rating': [4.0]},
     'user2': {'Type': ['Indian', 'Punjabi'], 'Budget': [700], 'Rating': [4.5]},
     'user3': {'Type': ['Fast Food', 'Sandwich'], 'Budget': [850], 'Rating': [3.5]}
+}
+
+# Sample users and their initial interests
+users = {
+    'User1': ['Buffet', 'Chinese'],
+    'User2': ['Indian', 'Punjabi'],
+    'User3': ['Italian', 'Chinese'],
+    'User4': ['Fast Food', 'Sandwich'],
+    'User5': ['Restaurant', 'Organic'],
+    'User6': ['Hamburger', 'Restaurant','Indian']
+}
+
+# Sample user feedback (liked restaurants)
+user_likes = {
+    'User1': ['Ratnagiri Coastal Bar', 'Aditi Fast Food & Restaurant'],
+    'User2': ['Jumbo king'],
+    'User3': [],
+    'User4': [],
+    'User5': [],
+    'User6': []
 }
 
 @app.post('/update_user_interests')
@@ -81,6 +103,15 @@ def get_adventure():
     time, mode_of_transport, distance, location, rating, users_budget , cuisine_type = inputs()
     theatre = theatre_calculation(location , distance, rating)
     return theatre.to_dict(orient='records') 
+
+@app.get('/plans')
+def get_plans():
+    plans()
+
+@app.get('/recommend2')
+def get_recommendations():
+    initial_recommend, further_recommend, user_profile = recommend2(users, user_likes)
+    return initial_recommend, further_recommend, user_profile
 
 if __name__ == '__main__':
     uvicorn.run(app, host='127.0.0.1', port=8000)

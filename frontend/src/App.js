@@ -7,6 +7,11 @@ import { ChakraProvider } from "@chakra-ui/react";
 import Plans from "./pages/Plans";
 import Customize from "./pages/Customize";
 import EditPlan from "./pages/EditPlan";
+import Signup from "./pages/Signup";
+import Signin from "./pages/Signin";
+import UserInterest from "./pages/UserInterest";
+import UserInterest2 from "./pages/UserInterest2";
+import Carousel from "./pages/Carousel";
 
 function App() {
     return (
@@ -14,6 +19,11 @@ function App() {
         <BrowserRouter>
             <Routes>
                 <Route path="/" element={<Dashboard />}/>
+                <Route path="/carousel" element={<Carousel />}/>
+                <Route path="/signup" element={<Signup />}/>
+                <Route path="/signin" element={<Signin />}/>
+                <Route path="/userInterest" element={<UserInterest />}/>
+                <Route path="/userInterest2" element={<UserInterest2 />}/>
                 <Route path="/plans" element={<Plans/>}/>
                 <Route path="/customize" element={<Customize/>}/>
                 <Route path='/editplan' element={<EditPlan />}/>
