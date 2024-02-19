@@ -4,9 +4,10 @@ import { FaRegHeart } from "react-icons/fa6";
 import { FaStar } from "react-icons/fa";
 import { useNavigate } from 'react-router-dom';
 
-const PlanCard = ({ planNo }) => {
+const PlanCard = ({ planNo, data }) => {
   const navigate = useNavigate();
-
+  console.log(data)
+  // const xyz = plan.row_df1;
   return (
     <Card bgColor={'#1F1F1F'} w={'500px'}>
   <CardHeader>
@@ -16,25 +17,24 @@ const PlanCard = ({ planNo }) => {
       <FaRegHeart color='red' size={'24px'}/>
     </Flex>
   </CardHeader>
-
   <CardBody>
     <Stack spacing='4'>
-    {[...Array(3)].map((_, index) => (
+    {Object.keys(data).map((key, index) => (
       <Flex justify={'space-between'}>
           <HStack spacing={5}>
             <Text color={'white'}>{index + 1}</Text>
             <Divider orientation='vertical' />
             <Box color={'white'}>
-              <Heading size={'md'}>Veg Treat Royale</Heading>
+              <Heading size={'md'}>{data[key].Name}</Heading>
               <Stack spacing={1}>
-              <Text mb={'0.2px'}>Veg Treat Royale</Text>
-              <Text>Veg Treat Royale</Text>
+              <Text mb={'0.2px'}>{data[key].Address}</Text>
+              <Text>{data[key].Station}</Text>
               </Stack>
             </Box>
           </HStack>
           <HStack spacing={2} alignItems={'flex-start'}>
             <FaStar color='yellow'/>
-            <Text color={'white'}>4.2/5</Text>
+            <Text color={'white'}>{data[key].Rating}/5</Text>
           </HStack>
       </Flex>
       ))}

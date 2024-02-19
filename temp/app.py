@@ -19,9 +19,19 @@ from theatre import theatre_calculation
 from plans import plans
 from recommend2 import recommend2
 from fastapi.responses import JSONResponse
+from fastapi.middleware.cors import CORSMiddleware
+from recommend2 import recommend_initial, recommend_further, update_profiles, initialize_profiles
 
-# 2. Create the app object
 app = FastAPI()
+
+# Allow requests from your frontend domain
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://localhost:3000"],
+    allow_credentials=True,
+    allow_methods=["GET", "POST", "PUT", "DELETE"],
+    allow_headers=["*"],
+)
 
 class UserInterests(BaseModel):
     Type: list[str]
@@ -55,6 +65,7 @@ user_likes = {
     # 'User5': [],
     # 'User6': []
 }
+
 
 @app.post('/update_user_interests')
 def update_user_interest_endpoint(new_user_interests: Dict[str, UserInterests]):
@@ -112,7 +123,13 @@ def get_plans():
 
 @app.get('/recommend2')
 def get_recommendations():
-    initial_recommend, further_recommend, user_profile = recommend2(users, user_likes)
+    # user_profiles = initialize_profiles(users, df_res)
+    # initial_recommendations = recommend_initial(users, user_profiles, df_res)
+    # user_profiles = update_profiles(user_likes, user_profiles, df_res)
+    # further_recommendations = recommend_further(users, user_profiles, df_res)
+    # return initial_recommendations, further_recommendations, user_profiles
+    initial_recommend, further_recommend, user_profile = recommend2(users, user_likes, df_res)
+    # print(initial_recommend, further_recommend, user_profile)
     return initial_recommend, further_recommend, user_profile
 
 if __name__ == '__main__':

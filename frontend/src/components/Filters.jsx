@@ -15,7 +15,7 @@ const Filters = () => {
     const [sliderValue, setSliderValue] = useState(50)
     const { selectedImageNames } = useContext(ImageContext);
 
-    console.log(selectedImageNames)
+    // console.log(selectedImageNames)
     const navigate = useNavigate('/plans')
 
   return (
@@ -111,7 +111,10 @@ const Filters = () => {
                 mt='3%' 
                 w='150px' 
                 alignSelf='center'
-                onClick={() => navigate('/plans')}
+                onClick={() => {
+                  navigate('/plans')
+                  window.location.reload()
+                }}
                 >PROCEED</Button>
 
                 </Stack>
