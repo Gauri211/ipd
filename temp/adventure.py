@@ -14,5 +14,5 @@ def adventure_calculation(location , distance, rating):
   adventure['Station'] = pd.Categorical(adventure['Station'], categories=sorted_nearest_locations, ordered=True)
   # Sort the DataFrame based on the 'stations' column
   adventure = adventure.sort_values(by=['Station', 'Rating'], ascending=[True, False])
-
+  adventure.to_csv('adventure_sorted.csv', index=False)
   return adventure

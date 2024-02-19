@@ -14,5 +14,5 @@ def religious_calculation(location , distance, rating):
   religious['station'] = pd.Categorical(religious['station'], categories=sorted_nearest_locations, ordered=True)
   # Sort the DataFrame based on the 'stations' column
   religious = religious.sort_values(by=['station', 'Ratings'], ascending=[True, False])
-
+  religious.to_csv('religious_sorted.csv', index=False)
   return religious

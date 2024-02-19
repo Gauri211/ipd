@@ -62,6 +62,8 @@ def recommend2(users, user_likes):
 
         # Get initial recommendations for each user
         user_type = ', '.join(user_profiles[user])
+        print(users[user][0])
+        print("helo:", user_type)
         initial_recommendations = recommend_restaurants(users[user][0], user_type, df_res)
     
         # Print initial recommendations
@@ -92,8 +94,8 @@ def recommend2(users, user_likes):
         
     # print(type(initial_recommendations))
     
-    print(initial_recommend)
-    print(further_recommend)
-    print(user_profile)
+    # print(initial_recommend)
+    # print(further_recommend)
+    # print(user_profile)
 
     return initial_recommend, further_recommend, user_profile

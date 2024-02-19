@@ -18,6 +18,7 @@ from religious import religious_calculation
 from theatre import theatre_calculation
 from plans import plans
 from recommend2 import recommend2
+from fastapi.responses import JSONResponse
 
 # 2. Create the app object
 app = FastAPI()
@@ -38,21 +39,21 @@ user_interests = {
 # Sample users and their initial interests
 users = {
     'User1': ['Buffet', 'Chinese'],
-    'User2': ['Indian', 'Punjabi'],
-    'User3': ['Italian', 'Chinese'],
-    'User4': ['Fast Food', 'Sandwich'],
-    'User5': ['Restaurant', 'Organic'],
-    'User6': ['Hamburger', 'Restaurant','Indian']
+    # 'User2': ['Indian', 'Punjabi'],
+    # 'User3': ['Italian', 'Chinese'],
+    # 'User4': ['Fast Food', 'Sandwich'],
+    # 'User5': ['Restaurant', 'Organic'],
+    # 'User6': ['Hamburger', 'Restaurant','Indian']
 }
 
 # Sample user feedback (liked restaurants)
 user_likes = {
-    'User1': ['Ratnagiri Coastal Bar', 'Aditi Fast Food & Restaurant'],
-    'User2': ['Jumbo king'],
-    'User3': [],
-    'User4': [],
-    'User5': [],
-    'User6': []
+    'User1': [],
+    # 'User2': ['Jumbo king'],
+    # 'User3': [],
+    # 'User4': [],
+    # 'User5': [],
+    # 'User6': []
 }
 
 @app.post('/update_user_interests')
@@ -106,7 +107,8 @@ def get_adventure():
 
 @app.get('/plans')
 def get_plans():
-    plans()
+    final_plans = plans()
+    return final_plans
 
 @app.get('/recommend2')
 def get_recommendations():

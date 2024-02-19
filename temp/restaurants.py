@@ -54,6 +54,7 @@ def restaurants_calculation(location , distance, rating, users_budget, cuisine_t
   # Sort the DataFrame based on the 'stations' column
   restaurants = restaurants.sort_values(by=['Station', 'Rating'], ascending=[True, False])
   print("yes")
+  restaurants.to_csv('restaurants_sorted.csv', index=False)
   return restaurants
 
 # restaurants = restaurants_calculation()

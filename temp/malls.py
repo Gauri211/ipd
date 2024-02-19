@@ -14,5 +14,5 @@ def malls_calculation(location , distance, rating):
   malls['Station'] = pd.Categorical(malls['Station'], categories=sorted_nearest_locations, ordered=True)
   # Sort the DataFrame based on the 'stations' column
   malls = malls.sort_values(by=['Station', 'Rating'], ascending=[True, False])
-
+  malls.to_csv('malls_sorted.csv', index=False)
   return malls

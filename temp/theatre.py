@@ -14,5 +14,5 @@ def theatre_calculation(location , distance, rating):
   theatre['Station'] = pd.Categorical(theatre['Station'], categories=sorted_nearest_locations, ordered=True)
   # Sort the DataFrame based on the 'stations' column
   theatre = theatre.sort_values(by=['Station', 'Rating'], ascending=[True, False])
-
+  theatre.to_csv('theatre_sorted.csv', index=False)
   return theatre

@@ -14,5 +14,5 @@ def nature_calculation(location , distance, rating):
   nature['Station'] = pd.Categorical(nature['Station'], categories=sorted_nearest_locations, ordered=True)
   # Sort the DataFrame based on the 'stations' column
   nature = nature.sort_values(by=['Station', 'Rating'], ascending=[True, False])
-
+  nature.to_csv('nature_sorted.csv', index=False)
   return nature

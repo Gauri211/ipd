@@ -14,5 +14,5 @@ def clubs_calculation(location , distance, rating):
   clubs['Station'] = pd.Categorical(clubs['Station'], categories=sorted_nearest_locations, ordered=True)
   # Sort the DataFrame based on the 'stations' column
   clubs = clubs.sort_values(by=['Station', 'Rating'], ascending=[True, False])
-
+  clubs.to_csv('clubs_sorted.csv', index=False)
   return clubs

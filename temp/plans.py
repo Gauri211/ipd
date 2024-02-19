@@ -1,13 +1,14 @@
 import pandas as pd
 import itertools
 from distance_cal import haversine
+import json
 
 def plans():
-    df_res = pd.read_csv('restaurants_new.csv')
-    df_malls = pd.read_csv('MallsDataset.csv')
-    df_clubs = pd.read_csv('clubs_final.csv')
-    df_nature = pd.read_csv('nature_station.csv')
-    df_adventure = pd.read_csv('AdventureDataset.csv')
+    df_res = pd.read_csv('restaurants_sorted.csv')
+    df_malls = pd.read_csv('malls_sorted.csv')
+    df_clubs = pd.read_csv('clubs_sorted.csv')
+    df_nature = pd.read_csv('nature_sorted.csv')
+    df_adventure = pd.read_csv('adventure_sorted.csv')
 
     user_preference = {
         1: 'restaurant',
@@ -96,17 +97,40 @@ def plans():
     # Sort permutations based on distances
     sorted_permutations = sorted(permutations_distances, key=lambda x: x[1])
 
+    final_plans = []
+    # plans = pd.DataFrame()
+    # output_dict = {}
     # Print or do whatever you want with the sorted permutations
+
+    output_data = []
+
     for i in range(min(6, len(sorted_permutations))):
         perm, distance = sorted_permutations[i]
         print(f"Distance: {distance}")
+        
+        # Accessing rows from dataframes
         row_df1 = df_res.head().iloc[perm[0]]
         row_df2 = df_malls.head().iloc[perm[1]]
         row_df3 = df_clubs.head().iloc[perm[2]]
         row_df4 = df_nature.head().iloc[perm[3]]
         row_df5 = df_adventure.head().iloc[perm[4]]
-        print("df1 row:", row_df1.values)
-        print("df2 row:", row_df2.values)
-        print("df3 row:", row_df3.values)
-        print("df4 row:", row_df4.values)
-        print("df5 row:", row_df5.values)
+
+        # Creating a dictionary to store the rows
+        output_dict = {
+            "row_df1": row_df1.to_dict(),
+            "row_df2": row_df2.to_dict(),
+            "row_df3": row_df3.to_dict(),
+            "row_df4": row_df4.to_dict(),
+            "row_df5": row_df5.to_dict()
+        }
+        
+        # Appending the dictionary to the output data list
+        output_data.append(output_dict)
+
+    # Convert the output data to JSON
+    json_output = json.dumps(output_data)
+
+    # Return or do something with the JSON output
+    # print(json_output)
+    json_data = json.loads(json_output)
+    return json_data
