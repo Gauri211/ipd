@@ -9,7 +9,7 @@ import axios from 'axios'
 const Plans = () => {
   // window.location.reload()
   const [visibleCards, setVisibleCards] = useState(4); // Number of cards to display initially
-//   const [totalCards, setTotalCards] = useState(8); // Total number of cards
+//const [totalCards, setTotalCards] = useState(8); // Total number of cards
   const [plans, setPlans] = useState([]);
 
   const handleViewMore = () => {
