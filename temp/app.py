@@ -38,6 +38,11 @@ class UserInterests(BaseModel):
     Budget: list[float]
     Rating: list[float]
 
+class recommend(BaseModel):
+    userId: str
+    initial: dict
+    further: dict
+
 df_res = pd.read_csv('restaurants_new.csv')
 
 user_interests = {
@@ -120,6 +125,7 @@ def get_adventure():
 def get_plans():
     final_plans = plans()
     return final_plans
+from fastapi.encoders import jsonable_encoder
 
 @app.get('/recommend2')
 def get_recommendations():
@@ -128,9 +134,11 @@ def get_recommendations():
     # user_profiles = update_profiles(user_likes, user_profiles, df_res)
     # further_recommendations = recommend_further(users, user_profiles, df_res)
     # return initial_recommendations, further_recommendations, user_profiles
-    initial_recommend, further_recommend, user_profile = recommend2(users, user_likes, df_res)
-    # print(initial_recommend, further_recommend, user_profile)
-    return initial_recommend, further_recommend, user_profile
+    initial_recommend, further_recommend = recommend2(users, user_likes, df_res)
+    print(initial_recommend, further_recommend)
+    print(type(initial_recommend), type(further_recommend))
+    return recommend(userId="User1",initial=initial_recommend.to_dict(), further=further_recommend.to_dict())
+    #return initial_recommend.to_dict(),further_recommend.to_dict()
 
 if __name__ == '__main__':
     uvicorn.run(app, host='127.0.0.1', port=8000)
